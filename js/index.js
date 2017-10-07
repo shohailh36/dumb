@@ -13,8 +13,10 @@ $(document).ready(function(){
 	/*getting appointment details*/
 	$('#appointment-list').on('click', '.appointment',function(ev){
 		var id = ev.currentTarget.id;
-//		getData.getAppointmentDetails(id).then(function(res){
-//			debugger
-//		})
+		getData.getAppointmentDetails(id).then(function(res){
+			debugger
+		}).catch(function(a,b){
+		    debugger
+		})
 	})
 })
