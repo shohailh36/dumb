@@ -32,3 +32,15 @@ body{
 	background-color: white;
 }
 
+.tab-content{
+    background-color: white;
+    order: 1px solid transparent;
+    border-color: #ddd #ddd #fff;
+}
+.appointment-details{
+    margin-left: 25px;
+    font-size: 12px;
+}
+.appointment-details b{
+    font-size: 14px;
+}

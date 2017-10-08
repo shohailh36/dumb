@@ -14,8 +14,15 @@ $(document).ready(function(){
 	$('#appointment-list').on('click', '.appointment',function(ev){
 		var id = ev.currentTarget.id;
 		getData.getAppointmentDetails(id).then(function(res){
-			debugger
+		    $('.no-appointment-selected').addClass('d-none')
+		    $('.appointment-info').removeClass('d-none')
+		    var source = $('#detailsTemplate').html();
+            var template = Handlebars.compile(source);
+            var html = template(res.appointments_details);
+            $('#detailsTemplate').html(html)
+
 		}).catch(function(a,b){
+
 		    debugger
 		})
 	})
